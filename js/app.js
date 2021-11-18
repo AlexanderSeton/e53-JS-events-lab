@@ -13,8 +13,23 @@ const handleForm = function (event){
   const category = event.target.category.value;
 
   const listItem = document.createElement("LI")
-  const listText = document.createTextNode(`${title}, ${author}, ${category}`)
-  listItem.appendChild(listText);
+  let titleText = `Title: ${title}`;
+  let authorText = `Author: ${author}`; 
+  let categoryText = `Category: ${category}`;
+  // const br = document.createElement("BR");
+  const titleNode = document.createElement("P");
+  const authorNode = document.createElement("P");
+  const categoryNode = document.createElement("P");
+  titleNode.textContent = titleText;
+  authorNode.textContent = authorText;
+  categoryNode.textContent = categoryText;
+  titleNode.classList.add("list-element");
+  authorNode.classList.add("list-element");
+  categoryNode.classList.add("list-element");
+  listItem.appendChild(titleNode);
+  // listItem.appendChild(br);
+  listItem.appendChild(authorNode);
+  listItem.appendChild(categoryNode);
 
   const readingList = document.querySelector("#reading-list");
   readingList.appendChild(listItem);

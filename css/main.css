@@ -1,3 +1,26 @@
 body {
   font-family: Palatino;
 }
+
+ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+li {
+  display: flex;
+  flex-flow: column;
+  width: 40%;
+  background-color: rgb(208, 208, 209);
+  border: rgb(13, 19, 8) 2px solid;
+  border-radius: 3px;
+  margin: 5px;
+  /* list-style: none; */
+  color: blue;
+}
+
+.list-element {
+  color: brown;
+  display: flex;
+  flex-flow: row; 
+}
