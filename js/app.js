@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const deleteButton = document.querySelector("#delete");
   deleteButton.addEventListener("click", handleDelete);
+
+  // const individualDelete = document.querySelector("#button")
 })
 
 const handleForm = function (event){
@@ -26,10 +28,22 @@ const handleForm = function (event){
   titleNode.classList.add("list-element");
   authorNode.classList.add("list-element");
   categoryNode.classList.add("list-element");
+  
+  // individual delete
+  const individualDelete = document.createElement("BUTTON");
+  individualDelete.innerHTML = "Delete";
+  individualDelete.id = title + author + category;
+  console.log(individualDelete.id);
+  individualDelete.addEventListener("click", handleDeleteIndividual);
+  console.log("individualDelete:", individualDelete);
+
   listItem.appendChild(titleNode);
   // listItem.appendChild(br);
   listItem.appendChild(authorNode);
   listItem.appendChild(categoryNode);
+  listItem.appendChild(individualDelete);
+
+  listItem.id = `${individualDelete.id}`;
 
   const readingList = document.querySelector("#reading-list");
   readingList.appendChild(listItem);
@@ -40,3 +54,12 @@ const handleDelete = function () {
   const readingList = document.querySelector("#reading-list")
   readingList.innerHTML = "";
 }
+
+// individual delete
+const handleDeleteIndividual = function (event) {
+  console.log("ID:", event.target.id);
+  const parentUl = document.querySelector("#reading-list");
+  let liToDelete = document.querySelector(`#${event.target.id}`);
+  console.log(liToDelete);
+  parentUl.removeChild(liToDelete);
+};
