@@ -11,16 +11,20 @@ li {
   display: flex;
   flex-flow: column;
   width: 40%;
-  background-color: rgb(208, 208, 209);
-  border: rgb(13, 19, 8) 2px solid;
-  border-radius: 3px;
+  max-width: 300px;
+  background-color: rgb(243, 243, 243);
+  border: rgb(214, 214, 214) 2px solid;
+  border-radius: 150px;
   margin: 5px;
-  /* list-style: none; */
+  padding: 0 0 0 10px;
   color: blue;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .list-element {
   color: brown;
   display: flex;
-  flex-flow: row; 
+  flex-flow: row;
 }
