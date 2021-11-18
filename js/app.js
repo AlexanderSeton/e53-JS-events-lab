@@ -5,11 +5,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const deleteButton = document.querySelector("#delete");
   deleteButton.addEventListener("click", handleDelete);
 
-  // const individualDelete = document.querySelector("#button")
+  individualDelete = document.querySelector("#test1");
+  individualDelete.addEventListener("click", handleDeleteIndividual);
+
+  individualDelete = document.querySelector("#test2");
+  individualDelete.addEventListener("click", handleDeleteIndividual);
+
+  individualDelete = document.querySelector("#test3");
+  individualDelete.addEventListener("click", handleDeleteIndividual);
+
+  individualDelete = document.querySelector("#test4");
+  individualDelete.addEventListener("click", handleDeleteIndividual);
+
+  individualDelete = document.querySelector("#test5");
+  individualDelete.addEventListener("click", handleDeleteIndividual);
+
+  individualDelete = document.querySelector("#test6");
+  individualDelete.addEventListener("click", handleDeleteIndividual);
+
+  individualDelete = document.querySelector("#test7");
+  individualDelete.addEventListener("click", handleDeleteIndividual);
+
+  individualDelete = document.querySelector("#test8");
+  individualDelete.addEventListener("click", handleDeleteIndividual);
+
+  individualDelete = document.querySelector("#test9");
+  individualDelete.addEventListener("click", handleDeleteIndividual);
 })
 
 const handleForm = function (event){
+
   event.preventDefault();
+
   const title = event.target.title.value;
   const author = event.target.author.value;
   const category = event.target.category.value;
